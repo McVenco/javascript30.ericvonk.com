@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'TR909';
   src: url('fonts/TR-909.woff') format('woff'),
-  url('fonts/TR-909.ttf') format('ttf');
+       url('fonts/TR-909.ttf') format('ttf');
   font-weight: 400;
   font-style: normal;
 }
@@ -22,9 +22,9 @@ body {
 }
 
 header {
-    margin: 10px;
-    font-size: 4em;
-    font-weight: bold;
+  margin: 10px;
+  font-size: 4em;
+  font-weight: bold;
 }
 
 .header-left {
