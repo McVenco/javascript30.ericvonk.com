@@ -16,96 +16,37 @@
         </div>
     </header>
 
-    <div class="drumkeys">
-        <div class="drumkey">
-
+    <div id="keyboard">
+        <div id="main">
+            <div data-key="65" class="key">
+                <div class="keycap"><br/>A<span class="side">clap</span></div>
+            </div>
+            <div data-key="83" class="key">
+                <div class="keycap"><br/>S<span class="side">hihat</span></div>
+            </div>
+            <div data-key="68" class="key">
+                <div class="keycap"><br/>D<span class="side">kick</span></div>
+            </div>
+            <div data-key="70" class="key">
+                <div class="keycap"><br/>F<span class="side">openhat</span></div>
+            </div>
+            <div data-key="71" class="key">
+                <div class="keycap"><br/>G<span class="side">boom</span></div>
+            </div>
+            <div data-key="72" class="key">
+                <div class="keycap"><br/>H<span class="side">ride</span></div>
+            </div>
+            <div data-key="74" class="key">
+                <div class="keycap"><br/>J<span class="side">snare</span></div>
+            </div>
+            <div data-key="75" class="key">
+                <div class="keycap"><br/>K<span class="side">tom</span></div>
+            </div>
+            <div data-key="76" class="key">
+                <div class="keycap"><br/>L<span class="side">tink</span></div>
+            </div>
         </div>
     </div>
-
-
-  <div class="keys">
-    <div data-key="65" class="key">
-      <kbd>A</kbd>
-      <span class="sound">clap</span>
-    </div>
-    <div data-key="83" class="key">
-      <kbd>S</kbd>
-      <span class="sound">hihat</span>
-    </div>
-    <div data-key="68" class="key">
-      <kbd>D</kbd>
-      <span class="sound">kick</span>
-    </div>
-    <div data-key="70" class="key">
-      <kbd>F</kbd>
-      <span class="sound">openhat</span>
-    </div>
-    <div data-key="71" class="key">
-      <kbd>G</kbd>
-      <span class="sound">boom</span>
-    </div>
-    <div data-key="72" class="key">
-      <kbd>H</kbd>
-      <span class="sound">ride</span>
-    </div>
-    <div data-key="74" class="key">
-      <kbd>J</kbd>
-      <span class="sound">snare</span>
-    </div>
-    <div data-key="75" class="key">
-      <kbd>K</kbd>
-      <span class="sound">tom</span>
-    </div>
-    <div data-key="76" class="key">
-      <kbd>L</kbd>
-      <span class="sound">tink</span>
-    </div>
-  </div>
-
-
-
-
-  <div id="keyboard">
-    <div id="main">
-
-      <div class="k65 key">
-        <div class="keycap">!<br/>A<span class="side">clap</span></div>
-      </div>
-      <div class="k83 key">
-        <div class="keycap">@<br/>S<span class="side">hihat</span></div>
-      </div>
-      <div class="k68 key">
-        <div class="keycap">#<br/>D<span class="side">kick</span></div>
-      </div>
-      <div class="k70 key">
-        <div class="keycap">$<br/>F<span class="side">openhat</span></div>
-      </div>
-      <div class="k71 key">
-        <div class="keycap">%<br/>G<span class="side">boom</span></div>
-      </div>
-      <div class="k72 key">
-        <div class="keycap">^<br/>H<span class="side">ride</span></div>
-      </div>
-      <div class="k74 key">
-        <div class="keycap">&<br/>J<span class="side">snare</span></div>
-      </div>
-      <div class="k75 key">
-        <div class="keycap">
-          <div class="led"></div>
-          <br/>K<span class="side">tom</span></div>
-      </div>
-      <div class="k76 key">
-        <div class="keycap">(<br/>L<span class="side">tink</span></div>
-      </div>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
 
   <audio data-key="65" src="sounds/clap.wav"></audio>
   <audio data-key="83" src="sounds/hihat.wav"></audio>
@@ -125,12 +66,12 @@
         if(!audio) return;
         audio.currentTime = 0;
         audio.play();
-        key.classList.add('playing');
+        key.classList.add('pressed');
     };
 
     function removeTransition(e){
         if(e.propertyName !== 'transform') return;
-        this.classList.remove('playing');
+        this.classList.remove('pressed');
     };
 
     const keys = document.querySelectorAll('.key');
