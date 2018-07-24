@@ -37,9 +37,12 @@ header {
 
 .keys {
   padding: 2px;
+  margin: 1px;
+  width: 58px;
+  height: 62px;
   background: #4d4d4d;
   border-radius: 4px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .key {
@@ -53,10 +56,6 @@ header {
   background: #d3cfcc;
   border-color: #ece8e4 #dedad6 #c9c4c4;
   transition: all .07s ease;
-}
-
-.pressed {
-  transform: scale(0.95, 0.95);
 }
 
 .key .keycap {
@@ -80,4 +79,8 @@ header {
   left: 4px;
   bottom: -10px;
   transform: rotateX(50deg);
+}
+
+.pressed {
+  transform: scale(0.95, 0.95);
 }
