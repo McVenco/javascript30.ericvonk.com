@@ -90,11 +90,18 @@
       const secondsDegrees = ((seconds / 60) * 360) + 90;
       secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
 
+
+      const allHands = document.querySelectorAll('.hand');
+      if(secondsDegrees === 90){
+        allHands.forEach(hand => hand.style.transition = 'none');
+      } else {
+        allHands.forEach(hand => hand.style.transition = '');
+      };
+
     }
 
     setInterval(setDate, 1000);
 
-    // todo: prevent glitch when hand hits 360 or 0 degrees!)
   </script>
 </body>
 </html>
